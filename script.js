@@ -1,10 +1,10 @@
-// Smooth fade-in animation
+// Fade animation for gallery
 
 const photos = document.querySelectorAll(".photo");
 
 const observer = new IntersectionObserver((entries) => {
 
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
 
         if(entry.isIntersecting){
 
@@ -16,14 +16,14 @@ const observer = new IntersectionObserver((entries) => {
     });
 
 }, {
-    threshold: 0.1
+    threshold:0.1
 });
 
-photos.forEach(photo => {
+photos.forEach((photo) => {
 
     photo.style.opacity = "0";
-    photo.style.transform = "translateY(30px)";
-    photo.style.transition = "0.8s ease";
+    photo.style.transform = "translateY(40px)";
+    photo.style.transition = "all 0.9s ease";
 
     observer.observe(photo);
 
